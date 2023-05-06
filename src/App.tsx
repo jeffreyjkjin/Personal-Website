@@ -1,5 +1,11 @@
+import Navbar from "./Navbar.tsx"
+
 const App: React.FC = () => {
-  return <p>Test</p>;
+  return (
+    <>
+        <Navbar />
+    </>
+  );
 };
 
-export default App
+export default App;
