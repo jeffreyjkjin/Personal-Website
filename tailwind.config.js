@@ -8,7 +8,14 @@ export default {
       fontFamily: {
         "metropolis": ["Metropolis", "sans-serif"]
       },
-      extend: {},
+      extend: {
+          colors: {
+              "white": "#F9F5EB",
+              "grey": "#E4DCCF",
+              "red": "#EA5455",
+              "blue": "#002B5B"
+          }
+      },
     },
     plugins: [],
   }
