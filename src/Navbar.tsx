@@ -1,6 +1,6 @@
 import "./styles.css"
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
     return (
         <>
             <div className="flex justify-center">
@@ -27,5 +27,3 @@ const Navbar: React.FC = () => {
         </>
     );
 };
-
-export default Navbar;

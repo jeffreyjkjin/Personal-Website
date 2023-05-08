@@ -1,11 +1,11 @@
-import Navbar from "./Navbar.tsx"
+import { About } from "./About.tsx"
+import { Navbar } from "./Navbar.tsx"
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <>
         <Navbar />
+        <About />
     </>
   );
 };
-
-export default App;
