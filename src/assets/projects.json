@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Project Name 1",
+        "github": "",
+        "youtube": "",
+        "image": "",
+        "tools": [
+            "Language",
+            "Framework"
+        ],
+        "what": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "soWhat": [
+            "Item 1",
+            "Item 2",
+            "Item 3"
+        ]
+    }, 
+    {
+        "title": "Project Name 2",
+        "github": "",
+        "image": "",
+        "tools": [
+            "Language",
+            "Framework",
+            "Design Tool"
+        ],
+        "what": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "soWhat": [
+            "Item 1",
+            "Item 2",
+            "Item 3"
+        ]
+    }
+]
