@@ -6,10 +6,10 @@ export const Portfolio: React.FC = () => {
     const projects: ProjectData[] = projectData;
 
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-grow flex-col items-center w-[56rem]">
             {projects.map((proj: ProjectData) => {
                 return (
-                    <div key={proj.title} className="w-full max-w-4xl">
+                    <div key={proj.title} className="w-full">
                         <Project {...proj} />
                     </div>
                 );

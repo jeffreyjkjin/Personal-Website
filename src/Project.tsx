@@ -23,33 +23,25 @@ export const Project: React.FC<ProjectData> = (project: ProjectData) => {
                     {project.title}
                 </div>
                 <div className="flex flex-row-reverse justify-end gap-4">
-                    <div>
-                        <button onClick={() => setOpen(!open)}>
-                            {!open ? <MdExpandMore />: <MdExpandLess />}
-                        </button>
-                    </div>
+                    <button onClick={() => setOpen(!open)}>
+                        {!open ? <MdExpandMore />: <MdExpandLess />}
+                    </button>
                     {project.github && (
-                        <div>
-                            <a href={project.github}>
-                                <BsGithub />
-                            </a>
-                        </div>
+                        <a href={project.github}>
+                            <BsGithub />
+                        </a>
                     )}
                     {project.youtube && (
-                        <div>
-                            <a href={project.youtube}>
-                                <BsYoutube />
-                            </a>
-                        </div>
+                        <a href={project.youtube}>
+                            <BsYoutube />
+                        </a>
                     )}
                 </div>
             </div>
             {open && (
                 <div className="flex p-6 bg-grey gap-6">
                     <div className="flex flex-col w-1/2">
-                        <div>
-                            <img src={project.image} alt={`${project.title} Image`} />
-                        </div>
+                        <img src={project.image} alt={`${project.title} Image`} />
                         <div className="flex flex-wrap justify-center gap-2 text-lg text-white">
                             {project.tools.map((tool: string) => {
                                 return (
@@ -62,17 +54,17 @@ export const Project: React.FC<ProjectData> = (project: ProjectData) => {
                     </div>
                     <div className="flex flex-col w-1/2 text-xl text-white gap-4">
                         <div className="flex flex-col bg-blue py-6">
-                            <div className="font-bold text-center">
+                            <p className="font-bold text-center">
                                 The What
-                            </div>
-                            <div className="text-justify text-lg px-6">
+                            </p>
+                            <p className="text-justify text-lg px-6">
                                 {project.what}
-                            </div>
+                            </p>
                         </div>
                         <div className="bg-blue py-6">
-                            <div className="font-bold text-center">
+                            <p className="font-bold text-center">
                                 The So What
-                            </div>
+                            </p>
                             <div className="text-justify text-lg px-6">
                                 <ul className="list-inside list-disc">
                                     {project.soWhat.map((item: string) => {
