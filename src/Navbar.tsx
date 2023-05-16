@@ -2,7 +2,7 @@ import "./styles.css"
 
 export const Navbar: React.FC = () => {
     return (
-        <div className="flex flex-col font-metropolis justify-items-start">
+        <div className="flex flex-col font-metropolis justify-items-start h-screen place-content-center drop-shadow-lg">
             <h1 className="font-bold text-8xl">
                 Hello friends!<br />
                 My name is Jeffrey.
