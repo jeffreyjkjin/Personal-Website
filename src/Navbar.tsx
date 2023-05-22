@@ -1,13 +1,39 @@
+import { motion } from "framer-motion"
 import "./styles.css"
+import Typewriter from "typewriter-effect"
 
 export const Navbar: React.FC = () => {
     return (
-        <div className="flex flex-col font-metropolis justify-items-start h-screen place-content-center drop-shadow-lg">
-            <h1 className="font-bold text-8xl">
-                Hello friends!<br />
-                My name is Jeffrey.
+        <div className="flex flex-col font-metropolis justify-items-start h-screen w-[56rem] place-content-center drop-shadow-lg">
+            <h1 className="font-bold text-[5.7rem] leading-none">
+                <Typewriter 
+                    options={{
+                        delay: 100
+                    }}
+                    onInit={(typewriter) => {
+                        typewriter
+                            .typeString("Hello friends! <br /> My name is Jeffrey.")
+                            .start();
+                    }}
+                    />
             </h1>
-            <div className="flex text-lg gap-16 m-2">
+            <motion.div 
+                className="flex text-lg gap-16 m-2"
+                initial={{
+                    y: "100vh",
+                    opacity: 0
+                }}
+                animate={{
+                    y: 0,
+                    opacity: 1
+                }}
+                transition={{
+                    type: "spring",
+                    duration: 1,
+                    bounce: 0.2,
+                    delay: 4
+                }}
+                >
                 <button>
                     About
                 </button>
@@ -17,7 +43,7 @@ export const Navbar: React.FC = () => {
                 <button>
                     Contact
                 </button>
-            </div>
+            </motion.div>
         </div>
     );
 }
