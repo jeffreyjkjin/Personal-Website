@@ -1,6 +1,6 @@
-import { BsGithub, BsYoutube } from "react-icons/Bs"
-import { MdExpandLess, MdExpandMore } from "react-icons/Md"
 import { useState } from "react"
+import { BsGithub, BsYoutube } from "react-icons/Bs"
+import { MdExpandMore } from "react-icons/Md"
 import "./styles.css"
 
 export interface ProjectData {
@@ -23,8 +23,11 @@ export const Project: React.FC<ProjectData> = (project: ProjectData) => {
                     {project.title}
                 </div>
                 <div className="flex flex-row-reverse justify-end gap-4">
-                    <button onClick={() => setOpen(!open)}>
-                        {!open ? <MdExpandMore />: <MdExpandLess />}
+                    <button 
+                        className={`transition-all ${open ? "rotate-180" : "rotate-0"}`}
+                        onClick={() => setOpen(!open)}
+                        >
+                        <MdExpandMore />
                     </button>
                     {project.github && (
                         <a href={project.github}>
@@ -38,8 +41,8 @@ export const Project: React.FC<ProjectData> = (project: ProjectData) => {
                     )}
                 </div>
             </div>
-            {open && (
-                <div className="flex p-6 bg-grey gap-6">
+            <div className={`transition-all duration-500 ${open ? "max-h-[50rem] overflow-clip" : "max-h-0 overflow-hidden"}`}>
+                <div className="flex bg-grey gap-6 p-6">
                     <div className="flex flex-col w-1/2">
                         <img src={project.image} alt={`${project.title} Image`} />
                         <div className="flex flex-wrap justify-center gap-2 text-lg text-white">
@@ -79,7 +82,7 @@ export const Project: React.FC<ProjectData> = (project: ProjectData) => {
                         </div>
                     </div>
                 </div>
-            )}
+            </div>
         </div>
     );
 }
