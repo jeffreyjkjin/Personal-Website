@@ -52,11 +52,11 @@ export const Project: React.FC<ProjectData> = (project: ProjectData) => {
                     <div className={`transition-all duration-500 ${open ? "max-h-[50rem] overflow-clip" : "max-h-0 overflow-hidden"}`}>
                         <div className="flex bg-grey gap-6 p-6">
                             <div className="flex flex-col w-1/2">
-                                <img src={project.image} alt={`${project.title} Image`} />
-                                <div className="flex flex-wrap justify-center gap-2 text-lg text-white">
+                                {project.image && <img src={project.image} alt={`${project.title} Image`} />}
+                                <div className={`flex flex-wrap justify-center gap-2 text-lg text-white ${project.image && "my-2"}`}>
                                     {project.tools.map((tool: string) => {
                                         return (
-                                            <div key={tool} className="bg-red px-2 py-1 my-2">
+                                            <div key={tool} className={`bg-red px-2 py-1`}>
                                                 {tool}
                                             </div>
                                         );
