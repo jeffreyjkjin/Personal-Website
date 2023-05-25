@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
             <motion.div 
                 className="flex text-lg gap-16 m-2"
                 initial={{
-                    y: "100vh",
+                    y: "10vh",
                     opacity: 0
                 }}
                 animate={{
