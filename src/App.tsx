@@ -11,6 +11,9 @@ export const App: React.FC = () => {
         <About />
         <Portfolio />
         <Contact />
+        <p className="font-metropolis text-md my-1">
+            Created by Jeffrey Jin, © 2023
+        </p>
     </div>
   );
 }
