@@ -1,8 +1,10 @@
-import { motion } from "framer-motion"
+import { AnimationControls, motion, useAnimation } from "framer-motion"
 import "./styles.css"
-import Typewriter from "typewriter-effect"
+import Typewriter, { TypewriterClass } from "typewriter-effect"
 
 export const Navbar: React.FC = () => {
+    const animation: AnimationControls = useAnimation();
+
     return (
         <div className="flex flex-col font-metropolis justify-items-start h-screen w-[56rem] place-content-center drop-shadow-lg">
             <h1 className="font-bold text-[5.7rem] leading-none">
@@ -10,10 +12,21 @@ export const Navbar: React.FC = () => {
                     options={{
                         delay: 100
                     }}
-                    onInit={(typewriter) => {
+                    onInit={(typewriter: TypewriterClass) => {
                         typewriter
                             .typeString("Hello friends! <br /> My name is Jeffrey.")
-                            .start();
+                            .start()
+                            .callFunction(() => {
+                                animation.start({
+                                    y: 0,
+                                    opacity: 1,
+                                    transition: {
+                                        type: "spring",
+                                        duration: 1,
+                                        bounce: 0.3
+                                    }
+                                });
+                            });
                     }}
                     />
             </h1>
@@ -23,16 +36,7 @@ export const Navbar: React.FC = () => {
                     y: "10vh",
                     opacity: 0
                 }}
-                animate={{
-                    y: 0,
-                    opacity: 1
-                }}
-                transition={{
-                    type: "spring",
-                    duration: 1,
-                    bounce: 0.2,
-                    delay: 4
-                }}
+                animate={animation}
                 >
                 <button>
                     About
