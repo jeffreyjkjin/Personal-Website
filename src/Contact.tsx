@@ -5,12 +5,12 @@ import "./styles.css"
 
 export const Contact: React.FC = () => {
     const [ref, inView] = useInView({
-        threshold: 0.3,
+        threshold: 0.5,
         initialInView: true
     });
 
     return (
-        <section ref={ref} className="w-[56rem] my-[40vh]">
+        <section ref={ref} className="w-[56rem] my-[35vh]">
             <ScrollReveal inView={inView}>
                 <div className="flex flex-col font-metropolis place-items-center gap-6 drop-shadow-lg">
                     <p className="font-bold text-8xl">

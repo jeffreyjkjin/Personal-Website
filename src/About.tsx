@@ -6,12 +6,12 @@ import "./styles.css"
 
 export const About: React.FC = () => {
     const [ref, inView] = useInView({
-        threshold: 0.3,
+        threshold: 0.5,
         initialInView: true
     });
 
     return (
-        <section ref={ref} className="w-[56rem] my-[40vh]">
+        <section ref={ref} className="w-[56rem] my-[35vh]">
             <ScrollReveal inView={inView}>
                 <div className="flex space-x-10 drop-shadow-lg">
                     <div className="flex flex-col font-metropolis bg-blue text-white text-lg w-1/2">

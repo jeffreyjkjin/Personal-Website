@@ -24,7 +24,7 @@ export const Project: React.FC<ProjectData> = (project: ProjectData) => {
 
     return (
         <section ref={ref}>
-            <ScrollReveal inView={inView}>
+            <ScrollReveal inView={inView} duration={0.5}>
                 <div className="flex flex-col font-metropolis">
                     <div className="flex flex-grow text-2xl p-6 bg-grey">
                         <div className="font-bold grow">
