@@ -4,6 +4,7 @@ import { ReactNode, useEffect, useState } from "react"
 interface ScrollRevealProps {
     children: ReactNode;
     inView: boolean;
+    duration?: number;
 }
 
 enum ScrollDirection {
@@ -11,7 +12,7 @@ enum ScrollDirection {
     Down = "Down"
 }
 
-export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView }) => {
+export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, duration }) => {
     const animation: AnimationControls = useAnimation();
     const [direction, setDirection] = useState<ScrollDirection>(ScrollDirection.Down);
 
@@ -52,7 +53,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView }) 
                 y: 0,
                 transition: {
                     type: "spring",
-                    duration: 1,
+                    duration: duration ? duration : 1,
                     bounce: 0.3
                 },
                 opacity: 1
@@ -60,14 +61,20 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView }) 
         }
         else if (!inView && direction == "Up") {
             animation.start({
-                y: "30vh",
+                y: "40vh",
                 opacity: 0,
             });
         }
     }, [inView]);
 
     return (
-        <motion.div animate={animation}>
+        <motion.div 
+            initial={{
+                y: "40vh",
+                opacity: 0
+            }}
+            animate={animation}
+            >
             {children}
         </motion.div>
     );
