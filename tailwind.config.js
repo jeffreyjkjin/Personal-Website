@@ -13,7 +13,8 @@ export default {
               "white": "#F9F5EB",
               "grey": "#E4DCCF",
               "red": "#EA5455",
-              "blue": "#002B5B"
+              "blue": "#002B5B",
+              "lightblue": "#3F72AF"
           }
       },
     },
