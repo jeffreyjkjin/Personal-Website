@@ -1,5 +1,5 @@
 import { AnimationControls, motion, useAnimation } from "framer-motion"
-import "./styles.css"
+import "@/styles.css"
 import Typewriter, { TypewriterClass } from "typewriter-effect"
 
 export const Navbar: React.FC = () => {

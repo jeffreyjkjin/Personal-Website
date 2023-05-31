@@ -2,8 +2,8 @@ import { useState } from "react"
 import { BsGithub, BsYoutube } from "react-icons/Bs"
 import { MdExpandMore } from "react-icons/Md"
 import { useInView } from "react-intersection-observer"
-import { ScrollReveal } from "./ScrollReveal.tsx"
-import "./styles.css"
+import { ScrollReveal } from "@/animation/ScrollReveal.tsx"
+import "@/styles.css"
 
 export interface ProjectData {
     title: string; 

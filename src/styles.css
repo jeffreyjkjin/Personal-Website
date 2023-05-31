@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('./fonts/Metropolis-Black.otf') format('otf'),
-         url('./fonts/Metropolis-regular.otf') format('otf');
+    src: url('@/fonts/Metropolis-Black.otf') format('otf'),
+         url('@/fonts/Metropolis-regular.otf') format('otf');
     font-weight: normal;
     font-style: normal;
 }
