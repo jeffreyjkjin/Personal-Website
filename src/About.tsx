@@ -11,7 +11,7 @@ export const About: React.FC = () => {
     });
 
     return (
-        <section ref={ref} className="w-[56rem] my-[35vh]">
+        <section ref={ref} className="w-[56rem]">
             <ScrollReveal inView={inView}>
                 <div className="flex space-x-10 drop-shadow-lg">
                     <div className="flex flex-col font-metropolis bg-blue text-white text-lg w-1/2">

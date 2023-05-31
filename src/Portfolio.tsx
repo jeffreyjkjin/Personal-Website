@@ -6,7 +6,7 @@ export const Portfolio: React.FC = () => {
     const projects: ProjectData[] = projectData;
 
     return (
-        <div className="flex my-[35vh]">
+        <div className="flex">
             <div className="flex flex-grow flex-col items-center w-[56rem] gap-10 drop-shadow-lg">
                 {projects.map((proj: ProjectData) => {
                     return (

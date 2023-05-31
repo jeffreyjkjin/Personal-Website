@@ -10,7 +10,7 @@ export const Contact: React.FC = () => {
     });
 
     return (
-        <section ref={ref} className="w-[56rem] my-[35vh]">
+        <section ref={ref} className="w-[56rem]">
             <ScrollReveal inView={inView}>
                 <div className="flex flex-col font-metropolis place-items-center gap-6 drop-shadow-lg">
                     <p className="font-bold text-8xl">
