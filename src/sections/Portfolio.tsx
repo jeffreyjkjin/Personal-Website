@@ -1,5 +1,6 @@
 import projectData from "@/assets/projects.json"
-import { Project, ProjectData } from "@/project/Project.tsx"
+import { Project } from "@/project/Project.tsx"
+import { ProjectData } from "@/project/ProjectData.tsx"
 import "@/styles.css"
 
 export const Portfolio: React.FC = () => {
