@@ -2,7 +2,11 @@ import { AnimationControls, motion, useAnimation } from "framer-motion"
 import "@/styles.css"
 import Typewriter, { TypewriterClass } from "typewriter-effect"
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+    setClick: React.Dispatch<React.SetStateAction<string>>
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ setClick }) => {
     const boxAnimation: AnimationControls = useAnimation();
     const navAnimation: AnimationControls = useAnimation();
 
@@ -57,15 +61,15 @@ export const Navbar: React.FC = () => {
                 }}
                 animate={navAnimation}
                 >
-                <button>
+                <a href="#about" onClick={() => { setClick("about")}}>
                     About
-                </button>
-                <button>
+                </a>
+                <a href="#projects" onClick={() => { setClick("projects")}}>
                     Projects
-                </button>
-                <button>
+                </a>
+                <a href="#contact" onClick={() => { setClick("contact")}}>
                     Contact
-                </button>
+                </a>
             </motion.div>
         </div>
     );
