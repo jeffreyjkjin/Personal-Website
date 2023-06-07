@@ -1,15 +1,16 @@
-import { AnimationControls, motion, useAnimation } from "framer-motion"
+import { AnimationControls, AnimationDefinition, motion, useAnimation } from "framer-motion"
 import { ReactNode, useEffect, useState } from "react"
 import { ScrollDirection, updateScrollDirection } from "@/animation/ScrollDirection.tsx"
 
 interface ScrollRevealProps {
     children: ReactNode;
     inView: boolean;
-    duration?: number;
+    initial?: AnimationDefinition;
+    animation?: AnimationDefinition;
 }
 
-export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, duration }) => {
-    const animation: AnimationControls = useAnimation();
+export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, initial, animation }) => {
+    const control: AnimationControls = useAnimation();
     const [direction, setDirection] = useState<ScrollDirection>(ScrollDirection.Down);
 
     useEffect(() => {
@@ -18,31 +19,27 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, du
 
     useEffect(() => {
         if (inView && direction == "Down") {
-            animation.start({
+            control.start(animation ? animation : {
                 y: 0,
                 transition: {
                     type: "spring",
-                    duration: duration ? duration : 1,
+                    duration: 1,
                     bounce: 0.3
                 },
                 opacity: 1
             });
         }
         else if (!inView && direction == "Up") {
-            animation.start({
+            control.start(initial ? initial : {
                 y: "40vh",
-                opacity: 0,
-            });
+                opacity: 0
+            })
         }
     }, [inView]);
 
     return (
         <motion.div 
-            initial={{
-                y: "40vh",
-                opacity: 0
-            }}
-            animate={animation}
+            animate={control}
             >
             {children}
         </motion.div>
