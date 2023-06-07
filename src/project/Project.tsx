@@ -14,10 +14,20 @@ export const Project: React.FC<ProjectData> = (project: ProjectData) => {
         initialInView: true
     });
 
-
     return (
         <section ref={ref}>
-            <ScrollReveal inView={inView} duration={0.5}>
+            <ScrollReveal 
+                inView={inView} 
+                animation={{
+                    y: 0, 
+                    transition: { 
+                        type: "spring", 
+                        duration: 0.5, 
+                        bounce: 0.3 
+                    }, 
+                    opacity: 1
+                }}
+                >
                 <div className="flex flex-col">
                     <ProjectTitle project={project} open={open} setOpen={setOpen} />
                     <ProjectDetails project={project} open={open} />
