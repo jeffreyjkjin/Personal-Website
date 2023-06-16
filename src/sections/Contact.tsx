@@ -1,8 +1,14 @@
+import { motion } from "framer-motion"
 import { MdOutlinePhone, MdMailOutline } from "react-icons/Md"
 import { useInView } from "react-intersection-observer"
+
+import { hover, tap } from "@/animation/Gestures.tsx"
 import { ScrollReveal } from "@/animation/ScrollReveal.tsx"
 import "@/styles.css"
 
+/*
+    DESC: Displays my contact information with clickable buttons.
+*/
 export const Contact: React.FC = () => {
     const [ref, inView] = useInView({
         threshold: 0.5,
@@ -17,18 +23,26 @@ export const Contact: React.FC = () => {
                         Let's Chat!
                     </p>
                     <div className="flex text-white text-3xl space-x-10 w-[46rem]">
-                        <div className="flex bg-blue place-content-center gap-2 p-6 w-1/2">
+                        <motion.div 
+                            className="flex bg-blue place-content-center gap-2 p-6 w-1/2"
+                            whileHover={hover(1.1)}
+                            whileTap={tap()}
+                            >
                                 <MdOutlinePhone />
                                 <a href="tel:778-938-6318">
                                     (778) 938-6318
                                 </a>
-                        </div>
-                        <div className="flex bg-blue place-content-center gap-2 p-6 w-1/2">
+                        </motion.div>
+                        <motion.div 
+                            className="flex bg-blue place-content-center gap-2 p-6 w-1/2"
+                            whileHover={hover(1.1)}
+                            whileTap={tap()}                            
+                            >
                                 <MdMailOutline /> 
                                 <a href="mailto:jeffrey_jin@sfu.ca">
                                     jeffrey_jin@sfu.ca
                                 </a>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </ScrollReveal>

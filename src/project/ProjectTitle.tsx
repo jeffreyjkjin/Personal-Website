@@ -1,6 +1,9 @@
-import { ProjectData } from "@/project/ProjectData.tsx"
+import { motion } from "framer-motion"
 import { BsGithub, BsYoutube } from "react-icons/Bs"
 import { MdExpandMore } from "react-icons/Md"
+
+import { hover, tap } from "@/animation/Gestures.tsx"
+import { ProjectData } from "@/project/ProjectData.tsx"
 import "@/styles.css"
 
 interface ProjectTitleProps {
@@ -9,6 +12,12 @@ interface ProjectTitleProps {
     setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+/*
+     DESC: Displays project title and some links about it.
+    PARAM: project - Project that will be displayed in this element.
+           open - Boolean indicating whether the accordion is currently opened.
+           setOpen - A setter from Project; used to tell Project if the accordion is open or not.
+*/
 export const ProjectTitle: React.FC<ProjectTitleProps> = ({ project, open, setOpen }) => {
     return (
         <div className="flex flex-grow font-metropolis text-2xl p-6 bg-grey">
@@ -16,23 +25,33 @@ export const ProjectTitle: React.FC<ProjectTitleProps> = ({ project, open, setOp
                 {project.title}
             </div>
             <div className="flex flex-row-reverse justify-end gap-4">
-                <button 
+                <motion.button 
                     className={`transition-all ${open ? "rotate-180" : "rotate-0"}`}
                     onClick={() => {
                         setOpen(!open)
                     }}
+                    whileHover={hover()}
+                    whileTap={tap()}
                     >
                     <MdExpandMore />
-                </button>
+                </motion.button>
                 {project.github && (
-                    <a href={project.github}>
+                    <motion.a 
+                        href={project.github}
+                        whileHover={hover()}
+                        whileTap={tap()}
+                        >
                         <BsGithub />
-                    </a>
+                    </motion.a>
                 )}
                 {project.youtube && (
-                    <a href={project.youtube}>
+                    <motion.a 
+                        href={project.youtube}
+                        whileHover={hover()}
+                        whileTap={tap()}
+                        >
                         <BsYoutube />
-                    </a>
+                    </motion.a>
                 )}
             </div>
         </div>

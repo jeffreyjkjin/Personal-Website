@@ -1,13 +1,19 @@
 import { AnimationControls, motion, useAnimation } from "framer-motion"
-import "@/styles.css"
 import Typewriter, { TypewriterClass } from "typewriter-effect"
+
+import { hover, tap } from "@/animation/Gestures.tsx"
+import "@/styles.css"
 
 interface NavbarProps {
     setClick: React.Dispatch<React.SetStateAction<string>>
 }
 
+/*
+     DESC: Displays buttons that sends the user to different parts of the website.
+    PARAM: setClick - A setter from App; used to find out what button was pressed by user in App.
+*/
 export const Navbar: React.FC<NavbarProps> = ({ setClick }) => {
-    const boxAnimation: AnimationControls = useAnimation();
+        const boxAnimation: AnimationControls = useAnimation();
     const navAnimation: AnimationControls = useAnimation();
 
     return (
@@ -61,15 +67,30 @@ export const Navbar: React.FC<NavbarProps> = ({ setClick }) => {
                 }}
                 animate={navAnimation}
                 >
-                <a href="#about" onClick={() => { setClick("about")}}>
+                <motion.a 
+                    href="#about" 
+                    onClick={() => { setClick("about") }} 
+                    whileHover={hover()}
+                    whileTap={tap()}
+                    >
                     About
-                </a>
-                <a href="#projects" onClick={() => { setClick("projects")}}>
+                </motion.a>
+                <motion.a 
+                    href="#projects" 
+                    onClick={() => { setClick("projects") }}
+                    whileHover={hover()}
+                    whileTap={tap()}
+                    >
                     Projects
-                </a>
-                <a href="#contact" onClick={() => { setClick("contact")}}>
+                </motion.a>
+                <motion.a 
+                    href="#contact" 
+                    onClick={() => { setClick("contact") }}
+                    whileHover={hover()}
+                    whileTap={tap()}
+                    >
                     Contact
-                </a>
+                </motion.a>
             </motion.div>
         </div>
     );
