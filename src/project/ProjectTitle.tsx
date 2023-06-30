@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { AnimationControls, motion, useAnimation } from "framer-motion"
 import { BsGithub, BsYoutube } from "react-icons/Bs"
 import { MdExpandMore } from "react-icons/Md"
 
@@ -19,6 +19,8 @@ interface ProjectTitleProps {
            setOpen - A setter from Project; used to tell Project if the accordion is open or not.
 */
 export const ProjectTitle: React.FC<ProjectTitleProps> = ({ project, open, setOpen }) => {
+    const animation: AnimationControls = useAnimation();
+
     return (
         <div className="flex flex-grow font-metropolis text-2xl p-6 bg-grey">
             <div className="font-bold grow">
@@ -26,12 +28,15 @@ export const ProjectTitle: React.FC<ProjectTitleProps> = ({ project, open, setOp
             </div>
             <div className="flex flex-row-reverse justify-end gap-4">
                 <motion.button 
-                    className={`transition-all ${open ? "rotate-180" : "rotate-0"}`}
                     onClick={() => {
                         setOpen(!open)
+                        animation.start({
+                            rotate: open ? 0 : 180
+                        });
                     }}
                     whileHover={hover()}
                     whileTap={tap()}
+                    animate={animation}
                     >
                     <MdExpandMore />
                 </motion.button>
