@@ -3,6 +3,9 @@ import { Project } from "@/project/Project.tsx"
 import { ProjectData } from "@/project/ProjectData.tsx"
 import "@/styles.css"
 
+/*
+    DESC: Displays all projects from projects.json.
+*/
 export const Portfolio: React.FC = () => {
     const projects: ProjectData[] = projectData;
 
@@ -19,4 +22,4 @@ export const Portfolio: React.FC = () => {
             </div>
         </div>
     );
-}
+};

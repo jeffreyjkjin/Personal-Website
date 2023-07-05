@@ -1,3 +1,6 @@
+/*
+    DESC: Contains project details.
+*/
 export interface ProjectData {
     title: string; 
     github?: string;
@@ -6,4 +9,4 @@ export interface ProjectData {
     tools: string[];   
     what: string;                
     soWhat: string[];
-}
+};

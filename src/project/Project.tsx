@@ -6,6 +6,10 @@ import { useInView } from "react-intersection-observer"
 import { ScrollReveal } from "@/animation/ScrollReveal.tsx"
 import "@/styles.css"
 
+/*
+     DESC: An accordion that contains the details for a single project.
+    PARAM: project - An individual project.
+*/
 export const Project: React.FC<ProjectData> = (project: ProjectData) => {
     const [open, setOpen] = useState<boolean>(false);
 
@@ -35,4 +39,4 @@ export const Project: React.FC<ProjectData> = (project: ProjectData) => {
             </ScrollReveal>
         </section>
     );
-}
+};

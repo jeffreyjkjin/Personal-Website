@@ -64,4 +64,4 @@ export const App: React.FC = () => {
             </p>
         </div>
     );
-}
+};

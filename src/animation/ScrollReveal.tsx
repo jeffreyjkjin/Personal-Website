@@ -9,10 +9,19 @@ interface ScrollRevealProps {
     animation?: AnimationDefinition;
 }
 
+
+/*
+     DESC: Animates the child elements when it is scrolled into view by the user.
+    PARAM: children - The child elements that will be revealed on scroll.
+           inView - Boolean indicating whether the element is currently visible or not by the user.
+           initial - Sets the initial position of the element.
+           animation - Animation that plays when the element is visible.
+*/
 export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, initial, animation }) => {
     const control: AnimationControls = useAnimation();
     const [direction, setDirection] = useState<ScrollDirection>(ScrollDirection.Down);
 
+    // determine if user is scrolling up or down
     useEffect(() => {
         updateScrollDirection(setDirection);
     }, [direction]);
@@ -44,4 +53,4 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, in
             {children}
         </motion.div>
     );
-}
+};

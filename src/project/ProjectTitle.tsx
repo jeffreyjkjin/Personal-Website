@@ -61,4 +61,4 @@ export const ProjectTitle: React.FC<ProjectTitleProps> = ({ project, open, setOp
             </div>
         </div>
     );
-}
+};

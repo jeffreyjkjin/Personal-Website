@@ -48,4 +48,4 @@ export const Contact: React.FC = () => {
             </ScrollReveal>
         </section>
     );
-}
+};

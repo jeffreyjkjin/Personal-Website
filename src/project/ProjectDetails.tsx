@@ -6,6 +6,11 @@ interface ProjectDetailsProps {
     open: boolean;
 }
 
+/*
+     DESC: Displays the details, images, frameworks and tools of a project.
+    PARAM: project - The project that will be displayed.
+           open - A boolean indicating whether the accordion is open or not.
+*/
 export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, open }) => {
     return (
         <div className={`transition-all duration-500 ${open ? "max-h-[50rem] overflow-clip" : "max-h-0 overflow-hidden"}`}>
@@ -51,4 +56,4 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, open })
             </div>
         </div>
     );
-}
+};

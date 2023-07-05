@@ -3,10 +3,17 @@ export enum ScrollDirection {
     Down = "Down"
 }
 
+/*
+     DESC: Determines what direction the user is scrolling in.
+    PARAM: setDirection - A setter from the parent element; used to set the current scroll direction.
+*/
 export const updateScrollDirection = (setDirection: React.Dispatch<React.SetStateAction<ScrollDirection>>) => {
     let prevScrollY: number = window.scrollY;
     let check: boolean = false;
 
+    /*
+        DESC: Determines if the user scroll up or down.
+    */
     const checkDirection = () => {
         check = false;
 
@@ -18,6 +25,9 @@ export const updateScrollDirection = (setDirection: React.Dispatch<React.SetStat
         prevScrollY = window.scrollY > 0 ? window.scrollY : 0;
     };
 
+    /*
+        DESC: Updates ever time the user scrolls and checks what direction.
+    */
     const onScroll = () => {
         if (!check) {
             window.requestAnimationFrame(checkDirection);
@@ -30,4 +40,4 @@ export const updateScrollDirection = (setDirection: React.Dispatch<React.SetStat
     return () => {
         window.removeEventListener("scroll", onScroll)
     };
-}
+};
