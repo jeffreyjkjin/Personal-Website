@@ -26,7 +26,7 @@ export const ProjectTitle: React.FC<ProjectTitleProps> = ({ project, open, setOp
             <div className="font-bold grow">
                 {project.title}
             </div>
-            <div className="flex flex-row-reverse justify-end gap-4">
+            <div className="flex flex-row-reverse justify-end gap-4 place-items-center">
                 <motion.button 
                     onClick={() => {
                         setOpen(!open)
@@ -61,4 +61,4 @@ export const ProjectTitle: React.FC<ProjectTitleProps> = ({ project, open, setOp
             </div>
         </div>
     );
-};
+}

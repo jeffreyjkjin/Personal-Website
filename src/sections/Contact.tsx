@@ -16,13 +16,13 @@ export const Contact: React.FC = () => {
     });
 
     return (
-        <section ref={ref} className="w-[56rem]">
+        <section ref={ref} className="w-[22rem] lg:w-[56rem]">
             <ScrollReveal inView={inView}>
-                <div className="flex flex-col font-metropolis place-items-center gap-6 drop-shadow-lg">
-                    <p className="font-bold text-8xl">
+                <div className="flex flex-col font-metropolis place-items-center drop-shadow-lg gap-6">
+                    <p className="font-bold text-6xl lg:text-8xl">
                         Let's Chat!
                     </p>
-                    <div className="flex text-white text-3xl space-x-10 w-[46rem]">
+                    <div className="flex flex-col lg:flex-row text-white text-3xl lg:space-x-10 w-[46rem] gap-6 lg:gap-0 place-items-center">
                         <motion.div 
                             className="flex bg-blue place-content-center gap-2 p-6 w-1/2"
                             whileHover={hover(1.1)}

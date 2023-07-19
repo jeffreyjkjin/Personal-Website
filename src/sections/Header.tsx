@@ -31,7 +31,7 @@ export const Header: React.FC<HeaderProps> = ({ setClick }) => {
     }
 
     return (
-        <div className="flex flex-col font-metropolis justify-items-start h-screen w-[56rem] place-content-center drop-shadow-lg">
+        <div className="flex flex-col font-metropolis justify-items-center lg:justify-items-start h-screen w-[22rem] lg:w-[56rem] place-content-center drop-shadow-lg">
             <Title animateNavbar={animateNavbar} />
             <motion.div 
                 className="flex text-lg gap-16 m-2 relative"
