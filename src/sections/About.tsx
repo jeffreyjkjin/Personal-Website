@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer"
 
 import { hover, tap } from "@/animation/Gestures.tsx"
 import { ScrollReveal } from "@/animation/ScrollReveal.tsx"
+import about from "@/assets/about.json"
 import picture from "/picture.jpg"
 import "@/styles.css"
 
@@ -20,9 +21,9 @@ export const About: React.FC = () => {
         <section ref={ref} className="w-[22rem] lg:w-[56rem]">
             <ScrollReveal inView={inView}>
                 <div className="flex flex-col-reverse lg:flex-row lg:space-x-10 drop-shadow-lg gap-6 lg:gap-0">
-                    <div className="flex flex-col font-metropolis bg-blue text-white text-lg lg:w-1/2">
+                    <div className="flex flex-col font-metropolis bg-blue text-white text-lg lg:w-[47.5%]">
                         <p className="p-6 h-3/4 text-justify">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            {about}
                         </p>
                         <div className="flex flex-col place-content-end p-6 h-1/4 text-xl gap-y-2">
                             <div className="flex">
@@ -49,7 +50,7 @@ export const About: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <img src={picture} alt="me :)" className="lg:w-1/2" />
+                    <img src={picture} alt="me :)" className="lg:w-[47.5%]" />
                 </div>
             </ScrollReveal>
         </section>
