@@ -22,9 +22,9 @@ export const Contact: React.FC = () => {
                     <p className="font-bold text-6xl lg:text-8xl">
                         Let's Chat!
                     </p>
-                    <div className="flex flex-col lg:flex-row text-white text-3xl lg:space-x-10 w-[46rem] gap-6 lg:gap-0 place-items-center">
+                    <div className="flex flex-col lg:flex-row text-white text-3xl lg:space-x-10 w-[22rem] lg:w-[46rem] gap-6 lg:gap-0 place-items-center">
                         <motion.div 
-                            className="flex bg-blue place-content-center gap-2 p-6 w-1/2"
+                            className="flex bg-blue place-content-center gap-2 p-6 w-full lg:w-1/2"
                             whileHover={hover(1.1)}
                             whileTap={tap()}
                             >
@@ -34,7 +34,7 @@ export const Contact: React.FC = () => {
                                 </a>
                         </motion.div>
                         <motion.div 
-                            className="flex bg-blue place-content-center gap-2 p-6 w-1/2"
+                            className="flex bg-blue place-content-center gap-2 p-6 w-full lg:w-1/2"
                             whileHover={hover(1.1)}
                             whileTap={tap()}                            
                             >
