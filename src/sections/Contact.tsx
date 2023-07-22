@@ -16,15 +16,15 @@ export const Contact: React.FC = () => {
     });
 
     return (
-        <section ref={ref} className="w-[22rem] lg:w-[56rem]">
+        <section ref={ref} className="w-[22rem] md:w-[44rem] lg:w-[56rem]">
             <ScrollReveal inView={inView}>
                 <div className="flex flex-col font-metropolis place-items-center drop-shadow-lg gap-6">
-                    <p className="font-bold text-6xl lg:text-8xl">
+                    <p className="font-bold text-6xl md:text-7xl lg:text-8xl">
                         Let's Chat!
                     </p>
-                    <div className="flex flex-col lg:flex-row text-white text-3xl lg:space-x-10 w-[22rem] lg:w-[46rem] gap-6 lg:gap-0 place-items-center">
+                    <div className="flex flex-col md:flex-row text-white text-3xl lg:space-x-10 w-[22rem] md:w-[44rem] lg:w-[46rem] gap-6 lg:gap-0 place-items-center">
                         <motion.div 
-                            className="flex bg-blue place-content-center gap-2 p-6 w-full lg:w-1/2"
+                            className="flex bg-blue place-content-center gap-2 p-6 w-full md:w-1/2"
                             whileHover={hover(1.1)}
                             whileTap={tap()}
                             >
@@ -34,7 +34,7 @@ export const Contact: React.FC = () => {
                                 </a>
                         </motion.div>
                         <motion.div 
-                            className="flex bg-blue place-content-center gap-2 p-6 w-full lg:w-1/2"
+                            className="flex bg-blue place-content-center gap-2 p-6 w-full md:w-1/2"
                             whileHover={hover(1.1)}
                             whileTap={tap()}                            
                             >

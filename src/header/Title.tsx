@@ -39,7 +39,7 @@ export const Title: React.FC<TitleProps> = ({ animateNavbar }) => {
                 }}
             />
             <motion.div 
-                className="bg-lightblue w-[20rem] h-[4rem] absolute -bottom-[0.5rem] right-[1rem] -z-10"
+                className="bg-lightblue w-[20rem] h-[4rem] absolute -bottom-[0.5rem] right-[0.1rem] md:right-[22rem] lg:right-[1rem] -z-10"
                 initial={{
                     x: "20vw",
                     opacity: 0

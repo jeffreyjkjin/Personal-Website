@@ -11,7 +11,7 @@ export const Portfolio: React.FC = () => {
 
     return (
         <div className="flex">
-            <div className="flex flex-grow flex-col items-center w-[22rem] lg:w-[56rem] gap-10 drop-shadow-lg">
+            <div className="flex flex-grow flex-col items-center w-[22rem] md:w-[44rem] lg:w-[56rem] gap-10 drop-shadow-lg">
                 {projects.map((proj: ProjectData): JSX.Element => {
                     return (
                         <div key={proj.title} className="w-full">
