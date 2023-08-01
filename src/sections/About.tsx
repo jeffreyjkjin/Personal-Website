@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { BsGithub, BsLinkedin } from "react-icons/Bs"
+import { BsGithub, BsLinkedin } from "react-icons/bs"
 import { useInView } from "react-intersection-observer"
 
 import { hover, tap } from "@/animation/Gestures.tsx"

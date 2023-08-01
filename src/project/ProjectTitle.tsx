@@ -1,6 +1,6 @@
 import { AnimationControls, motion, useAnimation } from "framer-motion"
-import { BsGithub, BsYoutube } from "react-icons/Bs"
-import { MdExpandMore } from "react-icons/Md"
+import { BsGithub, BsYoutube } from "react-icons/bs"
+import { MdExpandMore } from "react-icons/md"
 
 import { hover, tap } from "@/animation/Gestures.tsx"
 import { ProjectData } from "@/project/ProjectData.tsx"

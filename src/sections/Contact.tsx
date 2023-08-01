@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { MdOutlinePhone, MdMailOutline } from "react-icons/Md"
+import { MdOutlinePhone, MdMailOutline } from "react-icons/md"
 import { useInView } from "react-intersection-observer"
 
 import { hover, tap } from "@/animation/Gestures.tsx"
