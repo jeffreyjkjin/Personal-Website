@@ -28,7 +28,7 @@ export const Title: React.FC<TitleProps> = ({ animateNavbar }) => {
                     animateNavbar();
                     animation.start({
                         x: 0,
-                        opacity: 0.75,
+                        opacity: 1,
                         transition: {
                             type: "spring",
                             duration: 0.5,
