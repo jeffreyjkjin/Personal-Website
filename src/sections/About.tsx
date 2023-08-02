@@ -20,8 +20,8 @@ export const About: React.FC = () => {
     return (
         <section ref={ref} className="w-[22rem] md:w-[44rem] lg:w-[56rem]">
             <ScrollReveal inView={inView}>
-                <div className="flex flex-col-reverse md:flex-row lg:space-x-10 drop-shadow-lg gap-6 lg:gap-0">
-                    <div className="flex flex-col font-metropolis bg-blue text-white text-lg md:w-[47.5%]">
+                <div className="flex flex-col-reverse md:flex-row drop-shadow-lg gap-6 lg:gap-0 justify-between">
+                    <div className="flex flex-col font-metropolis bg-blue text-white text-lg md:w-[48%]">
                         <p className="p-6 h-3/4 text-justify">
                             {about}
                         </p>
@@ -50,7 +50,7 @@ export const About: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <img src={picture} alt="me :)" className="md:w-[47.5%]" />
+                    <img src={picture} alt="me :)" className="md:w-[48%]" />
                 </div>
             </ScrollReveal>
         </section>
