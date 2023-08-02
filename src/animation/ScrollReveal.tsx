@@ -32,7 +32,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, in
                 y: 0,
                 transition: {
                     type: "spring",
-                    duration: 1,
+                    duration: 2,
                     bounce: 0.3
                 },
                 opacity: 1

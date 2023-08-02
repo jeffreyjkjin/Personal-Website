@@ -26,7 +26,7 @@ export const Project: React.FC<ProjectData> = (project: ProjectData) => {
                     y: 0, 
                     transition: { 
                         type: "spring", 
-                        duration: 0.5, 
+                        duration: 1, 
                         bounce: 0.3 
                     }, 
                     opacity: 1
