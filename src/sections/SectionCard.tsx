@@ -3,21 +3,25 @@ import "@/styles.css"
 interface SectionCardProps {
     name: string;
     length: number;
-    top: number;
 }
 
-export const SectionCard: React.FC<SectionCardProps> = ({ name, length, top }) => {
+/*
+     DESC: Displays a card that indicates the current section the user is on.
+    PARAM: name - The name of the section.
+           length - The length of the highlight box.
+*/
+export const SectionCard: React.FC<SectionCardProps> = ({ name, length }) => {
     return (
-        <div className="font-metropolis font-bold text-3xl relative">
-            <div className={`flex items-center gap-8 absolute -rotate-90 origin-left -left-[4rem] top-[${top}rem]`}>
-                <div className="bg-black h-2 w-[10rem]"></div>
-                <div className="flex relative">
-                    <div className={`bg-lightblue opacity-75 h-[1.5rem] w-[${length}rem] absolute -bottom-[0rem] right-[0.75rem]`}></div>
-                    <p className="z-10">
-                        {name}  
-                    </p>
+        <section>
+            <div className="font-metropolis font-bold text-3xl drop-shadow-lg invisible lg:visible">
+                <div className="flex flex-row-reverse rotate-180 [writing-mode:vertical-rl] mx-6 gap-6">
+                    <p className="z-20">{name}</p>
+                    <div className="flex relative">
+                        <p className="-tracking-[0.2rem] relative">——————</p>
+                        <div className={`bg-lightblue absolute w-[1.5rem] h-[${length}rem] right-[0.9rem] top-[9.25rem]`}></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
-}
+};
