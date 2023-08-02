@@ -3,6 +3,7 @@ import { About } from "@/sections/About.tsx"
 import { Contact } from "@/sections/Contact.tsx"
 import { Header } from "@/sections/Header.tsx"
 import { Portfolio } from "@/sections/Portfolio.tsx"
+import { SectionCard } from "@/sections/SectionCard.tsx"
 import "@/styles.css"
 
 /*
@@ -45,13 +46,22 @@ export const App: React.FC = () => {
     return (
         <div className="flex flex-col place-items-center">
             <Header setClick={setClick} />
-            <div ref={about} className="flex my-[15vh] lg:my-[35vh] relative z-10">
+            <div ref={about} className="flex my-[15vh] lg:my-[35vh] relative">
+                <div className="absolute -left-[5rem]">
+                    <SectionCard name={"About"} length={6} />
+                </div>
                 <About />
             </div>
-            <div ref={projects} className="flex my-[15vh] lg:my-[35vh] relative z-10">
+            <div ref={projects} className="flex my-[15vh] lg:my-[35vh] relative">
+                <div className="absolute -left-[5rem]">
+                    <SectionCard name={"Portfolio"} length={8} />
+                </div>
                 <Portfolio />
             </div>
-            <div ref={contact} className="flex my-[15vh] lg:my-[35vh] relative z-10">
+            <div ref={contact} className="flex my-[15vh] lg:my-[35vh] relative">
+                <div className="absolute -left-[5rem]">
+                    <SectionCard name={"Contact"} length={7.5} />
+                </div>
                 <Contact />
             </div>
             <p className="font-metropolis text-md my-1">

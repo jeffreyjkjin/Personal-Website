@@ -19,13 +19,12 @@ export default {
       },
     },
     safelist: [
-        "top-[14.6rem]",
-        "top-[16.6rem]",
-        "top-[18.1rem]",
-        "top-[18.3rem]",
-        "w-[6rem]",
-        "w-[7.5rem]",
-        "w-[8rem]"
+        "h-[6rem]",
+        "h-[7.5rem]",
+        "h-[8rem]",
+        "bottom-[0.6rem]",
+        "bottom-[0.75rem]",
+        "bottom-[0.8rem]"
     ],
     plugins: [],
   }
