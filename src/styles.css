@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('@/fonts/Metropolis-regular.otf') format('otf');
+    src: url('@/fonts/Metropolis-Regular.otf') format('otf');
     font-weight: normal;
     font-style: normal;
 }
