@@ -1,3 +1,5 @@
+import { ReactElement } from "react"
+
 import { ProjectData } from "@/project/ProjectData.tsx"
 import "@/styles.css"
 
@@ -18,7 +20,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, open })
                 <div className="flex flex-col lg:w-1/2">
                     {project.image && <img src={project.image} alt={`${project.title} Image`} />}
                     <div className={`flex flex-wrap justify-center gap-2 text-lg text-white ${project.image && "my-2"}`}>
-                        {project.tools.map((tool: string): JSX.Element => {
+                        {project.tools.map((tool: string): ReactElement => {
                             return (
                                 <div key={tool} className={`bg-red px-2 py-1`}>
                                     {tool}
@@ -42,7 +44,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, open })
                         </p>
                         <div className="text-justify text-lg px-6">
                             <ul className="list-inside list-disc">
-                                {project.soWhat.map((item: string): JSX.Element => {
+                                {project.soWhat.map((item: string): ReactElement => {
                                     return (
                                         <li key={item}>
                                             {item}
