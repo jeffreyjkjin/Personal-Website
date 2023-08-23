@@ -1,9 +1,12 @@
 [
     {
         "title": "Project Name 1",
-        "github": "",
-        "youtube": "",
-        "image": "",
+        "links": [
+            "https://www.github.com",
+            "https://www.youtube.com",
+            "https://www.itch.io",
+            "https://www.jeffreyjin.com"
+        ],
         "tools": [
             "Language",
             "Framework"
@@ -17,8 +20,6 @@
     }, 
     {
         "title": "Project Name 2",
-        "github": "",
-        "image": "",
         "tools": [
             "Language",
             "Framework",
