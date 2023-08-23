@@ -1,8 +1,9 @@
 import { AnimationControls, motion, useAnimation } from "framer-motion"
-import { BsGithub, BsYoutube } from "react-icons/bs"
+import { ReactElement } from "react"
 import { MdExpandMore } from "react-icons/md"
 
 import { hover, tap } from "@/animation/Gestures.tsx"
+import { LinkButton } from "@/buttons/LinkButton.tsx"
 import { ProjectData } from "@/project/ProjectData.tsx"
 import "@/styles.css"
 
@@ -40,24 +41,11 @@ export const ProjectTitle: React.FC<ProjectTitleProps> = ({ project, open, setOp
                     >
                     <MdExpandMore />
                 </motion.button>
-                {project.github && (
-                    <motion.a 
-                        href={project.github}
-                        whileHover={hover()}
-                        whileTap={tap()}
-                        >
-                        <BsGithub />
-                    </motion.a>
-                )}
-                {project.youtube && (
-                    <motion.a 
-                        href={project.youtube}
-                        whileHover={hover()}
-                        whileTap={tap()}
-                        >
-                        <BsYoutube />
-                    </motion.a>
-                )}
+                {project.links && project.links.map((link: string): ReactElement => {
+                    return (
+                        <LinkButton link={link} key={link} />   
+                    );
+                })}
             </div>
         </div>
     );
