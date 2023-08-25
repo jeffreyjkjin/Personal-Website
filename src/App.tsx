@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react"
+
+import { ScrollTopButton } from "@/buttons/ScrollTopButton.tsx"
 import { About } from "@/sections/About.tsx"
 import { Contact } from "@/sections/Contact.tsx"
 import { Header } from "@/sections/Header.tsx"
@@ -10,8 +12,11 @@ import "@/styles.css"
     DESC: Displays each section on the website.
 */
 export const App: React.FC = () => {
+    // used to grab the visibility of the header and passed scroll to top button
+    const [headerInView, setHeaderInView] = useState<boolean>(true);
+
     // logic for navbar buttons
-    const [click, setClick] = useState("");
+    const [click, setClick] = useState<string>("");
 
     const about: React.MutableRefObject<HTMLDivElement | null> = useRef(null);
     const projects: React.MutableRefObject<HTMLDivElement | null> = useRef(null);
@@ -45,7 +50,8 @@ export const App: React.FC = () => {
 
     return (
         <div className="flex flex-col place-items-center">
-            <Header setClick={setClick} />
+            <Header setClick={setClick} setHeaderInView={setHeaderInView} />
+            <ScrollTopButton headerInView ={headerInView} />
             <div ref={about} className="flex my-[15vh] lg:my-[35vh] relative">
                 <div className="absolute -left-[5rem]">
                     <SectionCard name={"About"} length={6} />
