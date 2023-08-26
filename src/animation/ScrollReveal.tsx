@@ -5,7 +5,6 @@ import { ScrollDirection, updateScrollDirection } from "@/animation/ScrollDirect
 interface ScrollRevealProps {
     children: ReactNode;
     inView: boolean;
-    initial?: AnimationDefinition;
     animation?: AnimationDefinition;
 }
 
@@ -14,12 +13,11 @@ interface ScrollRevealProps {
      DESC: Animates the child elements when it is scrolled into view by the user.
     PARAM: children - The child elements that will be revealed on scroll.
            inView - Boolean indicating whether the element is currently visible or not by the user.
-           initial - Sets the initial position of the element.
            animation - Animation that plays when the element is visible.
 */
-export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, initial, animation }) => {
+export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, animation }) => {
     const control: AnimationControls = useAnimation();
-    const [direction, setDirection] = useState<ScrollDirection>(ScrollDirection.Down);
+    const [direction, setDirection] = useState<ScrollDirection>(ScrollDirection.Up);
 
     // determine if user is scrolling up or down
     useEffect(() => {
@@ -28,7 +26,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, in
 
     useEffect(() => {
         if (inView && direction == "Down") {
-            control.start(animation ? animation : {
+                control.start(animation ? animation : {
                 y: 0,
                 transition: {
                     type: "spring",
@@ -39,7 +37,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, inView, in
             });
         }
         else if (!inView && direction == "Up") {
-            control.start(initial ? initial : {
+                control.start({
                 y: "40vh",
                 opacity: 0
             })

@@ -24,10 +24,6 @@ export const SectionCard: React.FC<SectionCardProps> = ({ name, length }) => {
             <div className="font-metropolis font-bold text-3xl drop-shadow-lg invisible lg:visible">
                 <ScrollReveal 
                     inView={inView} 
-                    initial={{
-                        y: "40vh", 
-                        opacity: 0
-                    }}
                     >
                     <div className="flex flex-row-reverse rotate-180 [writing-mode:vertical-rl] mx-6 gap-6">
                         <p className="z-20">{name}</p>
