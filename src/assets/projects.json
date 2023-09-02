@@ -1,35 +1,77 @@
 [
     {
-        "title": "Project Name 1",
+        "title": "Personal Website",
         "links": [
-            "https://www.github.com",
-            "https://www.youtube.com",
-            "https://www.itch.io",
-            "https://www.jeffreyjin.com"
+            "https://www.jeffreyjin.com",
+            "https://github.com/jeffreyjkjin/Personal-Website" 
         ],
+        "image": "/personalsite.gif",
         "tools": [
-            "Language",
-            "Framework"
+			"Figma",
+			"React",
+			"Tailwind CSS",
+            "TypeScript",
+			"Vite"
         ],
-        "what": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "what": "The website you are on right now! Developed so I could learn web development and have a place to show off my projects.",
         "soWhat": [
-            "Item 1",
-            "Item 2",
-            "Item 3"
+            "Designed a modern and clean single-page portfolio with Figma",
+            "Used React to create functional and reusable components add scroll animations",
+            "Styled using Tailwind to replicate the initial prototype and make the user interface responsive"
         ]
-    }, 
+    },
     {
-        "title": "Project Name 2",
+        "title": "Simple Processor Pipeline Simulator",
+        "links": [
+            "https://github.com/jeffreyjkjin/Simple-Processor-Pipeline-Simulator" 
+        ], 
         "tools": [
-            "Language",
-            "Framework",
-            "Design Tool"
+            "C++"
         ],
-        "what": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "what": "A simple cycle-accurate simulator for a W-wide superscalar in-order processor with five stages. Developed for CMPT 305 Spring 2023 at SFU.",
         "soWhat": [
-            "Item 1",
-            "Item 2",
-            "Item 3"
+            "Handled instruction arrivals and departures with a queue to ensure instructions do not proceed out-of-order or with unsatisfied dependencies",
+            "Stored retired instructions in an unordered map to prevent data hazards",
+            "Completed a two-factor analysis to determine the impact of pipeline width and workload on execution time"
+        ]
+    },
+    {
+        "title": "Untitled Farm Game",
+        "links": [
+            "https://www.youtube.com/watch?v=4MRnaP6zbAo",
+            "https://jeffreyjin.itch.io/untitled-farm-game",
+            "https://github.com/jeffreyjkjin/Untitled-Farm-Game" 
+        ], 
+        "image": "/farmgame.gif",
+        "tools": [
+            "Figma",
+            "Java",
+			"JavaDocs",
+			"JUnit",
+            "Maven"
+        ],
+        "what": "A 2D arcade-style game where you play as a freedom-loving chicken. Developed for CMPT 276 Fall 2022 at SFU.",
+        "soWhat": [
+            "Modelled components using UML diagrams to facilitate the implementation of the game's underlying classes",
+            "Utilized graphical utilities to prototype user interfaces and illustrate game sprites and tiles",
+            "Wrote Javadoc comments to ensure the game maintainability",
+            "Constructed tests using JUnit to evaluate the game's features, resulting in over 80% code coverage"
+        ]
+    },
+	{
+        "title": "Discord Bot",
+        "links": [
+            "github.com" 
+        ],
+        "tools": [
+			"discord.py",
+			"MongoDB",
+            "Python"
+        ],
+        "what": "A simple Discord bot I developed for use on my friend's server.",
+        "soWhat": [
+            "Created a database using MongoDB to track the data of over a hundred users",
+            "Implemented a music player using Pafy and YT-DLP libraries, allowing users to queue, skip, pause, and play music while in a voice channel"
         ]
     }
 ]
