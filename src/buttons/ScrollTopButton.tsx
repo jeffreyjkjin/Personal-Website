@@ -30,7 +30,7 @@ export const ScrollTopButton: React.FC<ScrollTopButtonProps> = ({ headerInView }
 
     return (
         <motion.button
-            className="bg-blue p-3 rounded-full text-2xl text-white fixed bottom-[4rem] right-[4rem] lg:visible"
+            className="bg-blue p-3 rounded-full text-2xl text-white fixed bottom-[4rem] right-[4rem] invisible lg:visible"
             whileHover={hover()}
             whileTap={tap()}
             initial={{
