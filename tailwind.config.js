@@ -10,7 +10,7 @@ export default {
             "metropolis": ["Metropolis", "serif"]
         },
         colors: {
-            "white": "#F9F5EB",
+            "beige": "#F9F5EB",
             "grey": "#E4DCCF",
             "red": "#EA5455",
             "blue": "#002B5B",
