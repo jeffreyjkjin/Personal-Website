@@ -1,4 +1,5 @@
 import { AnimationControls, motion, useAnimation } from "framer-motion"
+import { atom, useAtom } from "jotai"
 import { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 
@@ -6,25 +7,22 @@ import { Navbar } from "@/header/Navbar.tsx"
 import { Title } from "@/header/Title.tsx"
 import "@/styles.css"
 
-interface HeaderProps {
-    setClick: React.Dispatch<React.SetStateAction<string>>;
-    setHeaderInView: React.Dispatch<React.SetStateAction<boolean>>;
-}
+export const headerInView = atom<boolean>(true);
 
 /*
      DESC: Displays welcome message and navigation buttons.
-    PARAM: setClick - A setter from App; used to find out what button was pressed by user in App.
-           setHeaderInView - A setter from App; used to find out if the header is visible.
 */
-export const Header: React.FC<HeaderProps> = ({ setClick, setHeaderInView }) => {
-    // passed to ScrollTopButton
+export const Header: React.FC = () => {
+    const [, setInView] = useAtom(headerInView);
+
     const [ref, inView] = useInView({
         threshold: 0,
         initialInView: true        
     });
 
+    // used by ScrollTopButton
     useEffect(() => {
-        setHeaderInView(inView);
+        setInView(inView);
     }, [inView]);
 
     const animation: AnimationControls = useAnimation();
@@ -51,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ setClick, setHeaderInView }) => 
                     }}
                     animate={animation}
                     >
-                    <Navbar setClick={setClick} />
+                    <Navbar />
                 </motion.div>
             </div>
         </section>
