@@ -43,7 +43,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, open })
                             The So What
                         </p>
                         <div className="text-justify text-lg px-6">
-                            <ul className="list-inside list-disc">
+                            <ul className="list-outside list-disc pl-4">
                                 {project.soWhat.map((item: string): ReactElement => {
                                     return (
                                         <li key={item}>
