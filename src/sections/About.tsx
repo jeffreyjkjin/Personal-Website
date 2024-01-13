@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { ReactElement } from "react"
 import { BsGithub, BsLinkedin } from "react-icons/bs"
 import { useInView } from "react-intersection-observer"
 
@@ -21,11 +22,17 @@ export const About: React.FC = () => {
         <section ref={ref} className="w-[22rem] md:w-[44rem] lg:w-[56rem]">
             <ScrollReveal inView={inView}>
                 <div className="flex flex-col-reverse md:flex-row drop-shadow-lg gap-6 lg:gap-0 justify-between">
-                    <div className="flex flex-col font-metropolis bg-blue text-white text-lg md:w-[48%]">
-                        <p className="p-6 h-3/4 text-justify">
-                            {about}
-                        </p>
-                        <div className="flex flex-col place-content-end p-6 h-1/4 text-xl gap-y-2">
+                    <div className="flex flex-col font-metropolis bg-blue text-white md:text-sm lg:text-lg md:w-[48%]">
+                        <ul className="p-6 text-justify space-y-2">
+                            {about.map((line: string): ReactElement => {
+                                return (
+                                    <li key={line}>
+                                        {line}
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                        <div className="flex flex-col place-content-end pl-6 pb-6 pr-6 md:text-lg lg:text-xl gap-y-2">
                             <div className="flex">
                                 <motion.a
                                     className="flex items-center gap-2"
