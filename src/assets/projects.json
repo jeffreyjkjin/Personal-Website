@@ -1,4 +1,21 @@
 [
+	{
+        "title": "Hippo Bot",
+        "links": [
+            "https://github.com/jeffreyjkjin/Hippo-Bot" 
+        ],
+        "tools": [
+			"discord.js",
+			"MongoDB",
+			"TypeScript"
+        ],
+        "image": "/hippobot.gif",
+        "what": "Quickly schedule events, set reminders, and create polls natively all without ever having to leave Discord.",
+        "soWhat": [
+			"Created a datebase in MongoDB to keep track of events, polls, and reminders for over a hundred users",
+			"Used modals from discord.js to build native forms to allow users to generate new events and polls"
+        ]
+    },
     {
         "title": "Personal Website",
         "links": [
@@ -25,6 +42,7 @@
         "links": [
             "https://github.com/jeffreyjkjin/Simple-Processor-Pipeline-Simulator" 
         ], 
+        "image": "/spps.jpg",
         "tools": [
             "C++"
         ],
@@ -56,22 +74,6 @@
             "Utilized graphical utilities to prototype user interfaces and illustrate game sprites and tiles",
             "Wrote Javadoc comments to ensure the game maintainability",
             "Constructed tests using JUnit to evaluate the game's features, resulting in over 80% code coverage"
-        ]
-    },
-	{
-        "title": "Discord Bot",
-        "links": [
-            "github.com" 
-        ],
-        "tools": [
-			"discord.py",
-			"MongoDB",
-            "Python"
-        ],
-        "what": "A simple Discord bot I developed for use on my friend's server.",
-        "soWhat": [
-            "Created a database using MongoDB to track the data of over a hundred users",
-            "Implemented a music player using Pafy and YT-DLP libraries, allowing users to queue, skip, pause, and play music while in a voice channel"
         ]
     }
 ]
