@@ -12,7 +12,7 @@ export default {
         colors: {
             "beige": "#F9F5EB",
             "grey": "#E4DCCF",
-            "red": "#EA5455",
+            "red": "#E63946",
             "blue": "#002B5B",
             "lightblue": "#3F72AF"
         }
