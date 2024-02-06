@@ -60,7 +60,7 @@ export const App: React.FC = () => {
                     <Contact />
                 </div>
                 <p className="font-metropolis text-md my-1">
-                    Created by Jeffrey Jin, © 2023
+                    Created by Jeffrey Jin © {(new Date()).getFullYear()}
                 </p>
             </div>
         </>
