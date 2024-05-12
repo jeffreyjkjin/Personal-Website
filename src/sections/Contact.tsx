@@ -4,10 +4,18 @@ import { useInView } from "react-intersection-observer"
 
 import { hover, tap } from "@/animation/Gestures.tsx"
 import { ScrollReveal } from "@/animation/ScrollReveal.tsx"
+import { ContactButton } from "@/buttons/ContactButton.tsx"
 import "@/styles.css"
 
+const links: string[] = [
+    "https://www.linkedin.com/in/jeffreyjkjin",
+    "https://www.github.com/jeffreyjkjin",
+    "mailto:jeffrey_jin@sfu.ca",
+    "tel:778-938-6318"
+];
+
 /*
-    DESC: Displays my contact information with clickable buttons.
+    DESC: Displays contact information with clickable buttons.
 */
 export const Contact: React.FC = () => {
     const [ref, inView] = useInView({
@@ -22,27 +30,12 @@ export const Contact: React.FC = () => {
                     <p className="font-bold text-6xl md:text-7xl lg:text-8xl">
                         Let's Chat!
                     </p>
-                    <div className="flex flex-col md:flex-row text-white text-3xl lg:space-x-10 w-[22rem] md:w-[44rem] lg:w-[46rem] gap-6 lg:gap-0 place-items-center">
-                        <motion.div 
-                            className="flex bg-blue place-content-center gap-2 p-6 w-full md:w-1/2"
-                            whileHover={hover(1.1)}
-                            whileTap={tap()}
-                            >
-                                <MdOutlinePhone />
-                                <a href="tel:778-938-6318">
-                                    (778) 938-6318
-                                </a>
-                        </motion.div>
-                        <motion.div 
-                            className="flex bg-blue place-content-center gap-2 p-6 w-full md:w-1/2"
-                            whileHover={hover(1.1)}
-                            whileTap={tap()}                            
-                            >
-                                <MdMailOutline /> 
-                                <a href="mailto:jeffrey_jin@sfu.ca">
-                                    jeffrey_jin@sfu.ca
-                                </a>
-                        </motion.div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-10 place-items-center">
+                        {links.map((link: string) => {
+                            return (
+                                <ContactButton key={link} link={link} />
+                            );
+                        })}
                     </div>
                 </div>
             </ScrollReveal>
