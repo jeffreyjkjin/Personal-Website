@@ -1,8 +1,5 @@
-import { motion } from "framer-motion"
-import { MdOutlinePhone, MdMailOutline } from "react-icons/md"
 import { useInView } from "react-intersection-observer"
 
-import { hover, tap } from "@/animation/Gestures.tsx"
 import { ScrollReveal } from "@/animation/ScrollReveal.tsx"
 import { ContactButton } from "@/buttons/ContactButton.tsx"
 import "@/styles.css"
