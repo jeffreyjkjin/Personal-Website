@@ -1,4 +1,31 @@
 [
+    {
+        "title": "Skintector",
+        "links": [
+            "https://skintector.vercel.app",
+            "https://www.youtube.com/watch?v=CnpN-qIJ_VI",
+            "https://github.com/jeffreyjkjin/Skintector"
+        ],
+        "tools": [
+            "Dexie",
+            "Figma",
+            "Flask",
+            "Mantine",
+            "Python",
+            "React",
+            "Tailwind",
+            "TensorFlow",
+            "TypeScript",
+            "Vite"
+        ],
+		"image": "/skintector.gif",
+        "what": "Diagnose skin conditions from the comfort of your own home. Developed for CMPT 340 Spring 2024 at SFU.",
+        "soWhat": [
+            "Prototyped the front-end using Figma and implemented it in React using Tailwind and Mantine, producing a responsive and easy-to-use web interface ",
+            "Built the back-end server using Flask to serve a skin lesion classification TensorFlow model",
+            "Wrote scripts using Selenium to scrape and format responses for nearly 200 skin conditions from ChatGPT"
+        ]
+    },
 	{
         "title": "Hippo Bot",
         "links": [
@@ -12,7 +39,7 @@
         "image": "/hippobot.gif",
         "what": "Quickly schedule events, set reminders, and create polls natively all without ever having to leave Discord.",
         "soWhat": [
-			"Created a datebase in MongoDB to keep track of events, polls, and reminders for over a hundred users",
+			"Created a database with MongoDB to keep track of events, polls, and reminders for over a hundred users",
 			"Used modals from discord.js to build native forms to allow users to generate new events and polls"
         ]
     },
@@ -26,14 +53,14 @@
         "tools": [
 			"Figma",
 			"React",
-			"Tailwind CSS",
+			"Tailwind",
             "TypeScript",
 			"Vite"
         ],
         "what": "The website you are on right now! Developed so I could learn web development and have a place to show off my projects.",
         "soWhat": [
             "Designed a modern and clean single-page portfolio with Figma",
-            "Used React to create functional and reusable components add scroll animations",
+            "Used React to create functional and reusable components and add scroll animations",
             "Styled using Tailwind to replicate the initial prototype and make the user interface responsive"
         ]
     },
@@ -56,8 +83,8 @@
     {
         "title": "Untitled Farm Game",
         "links": [
-            "https://www.youtube.com/watch?v=4MRnaP6zbAo",
             "https://jeffreyjin.itch.io/untitled-farm-game",
+            "https://www.youtube.com/watch?v=4MRnaP6zbAo",
             "https://github.com/jeffreyjkjin/Untitled-Farm-Game" 
         ], 
         "image": "/farmgame.gif",
@@ -70,7 +97,7 @@
         ],
         "what": "A 2D arcade-style game where you play as a freedom-loving chicken. Developed for CMPT 276 Fall 2022 at SFU.",
         "soWhat": [
-            "Modelled components using UML diagrams to facilitate the implementation of the game's underlying classes",
+            "Modelled components using UML diagrams to facilitate the implementation of the game's underlying classes and relations",
             "Utilized graphical utilities to prototype user interfaces and illustrate game sprites and tiles",
             "Wrote Javadoc comments to ensure the game maintainability",
             "Constructed tests using JUnit to evaluate the game's features, resulting in over 80% code coverage"
