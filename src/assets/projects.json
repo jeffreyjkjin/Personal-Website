@@ -1,4 +1,25 @@
-[
+[	{
+		"title": "Intrvl",
+		"links": [
+			"https://intrvl.vercel.app",
+            "https://github.com/jeffreyjkjin/Intrvl"
+		],
+		"tools": [
+			"Dexie",
+			"Figma",
+			"Tailwind",
+			"TypeScript",
+			"Vite",
+			"Vue"
+		],
+		"image": "/intrvl.gif",
+		"what": "Just a simple, customizable interval timer with no ads, costs, or any BS.",
+		"soWhat": [
+			"Designed the website using Figma to ensure the user interface is clean and responsive for all devices",
+            "Used Tailwind to replicate the front-end design in code and Vue to implement the back-end logic",
+			"Made a database with Dexie to store the users timers locally"
+		]
+	},
     {
         "title": "Skintector",
         "links": [
