@@ -49,7 +49,7 @@ export const App: React.FC = () => {
                 </div>
                 <div ref={options[1]} className="flex my-[15vh] lg:my-[35vh] relative">
                     <div className="absolute -left-[5rem]">
-                        <SectionCard name={"Portfolio"} length={8} />
+                        <SectionCard name={"Projects"} length={7.5} />
                     </div>
                     <Portfolio />
                 </div>
